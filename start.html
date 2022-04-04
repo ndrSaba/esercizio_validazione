@@ -31,7 +31,7 @@
 	</div>
 	<div>
 		<label for="form-plan">Piano di abbonamento</label>
-		<select id="form-plan" name="plan">
+		<select id="form-plan" name="plan" required>
 			<option value="0">Free</option>
 			<optgroup label="Mensili">
 				<option value="199">1.99€/mese</option>
@@ -44,9 +44,9 @@
 	</div>
 	<div>
 		<label for="form-cc">Numero Carta</label>
-		<input type="tel" inputmode="numeric" pattern="[0-9]*{13,19}" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" id="form-cc" name="cc" required/>
+		<input type="tel" inputmode="numeric" pattern="([0-9\s?]{4,5})([0-9\s?]{4,5})([0-9\s?]{4,5})([0-9\s?]{4,5}" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" id="form-cc" name="cc" required/>
 		<label for="form-cvc">CVC</label>
-		<input type="tel" inputmode="numeric" pattern="[0-9]*" maxlength="3" placeholder="xxx" id="form-cvc" name="cvc" required/>
+		<input type="tel" inputmode="numeric" pattern="[0-9\s]{0,3}" maxlength="3" placeholder="xxx" id="form-cvc" name="cvc" required/>
 		<label for="form-exp">Scadenza</label>
 		<input id="form-exp" name="exp" type="date" required/>
 		<label for="form-address">Indirizzo di fatturazione</label>
